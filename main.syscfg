@@ -1,0 +1,72 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "F28004x" --part "F28004x_100PZ" --package "F28004x_100PZ" --product "powerSUITE@3.00.00.00"
+ * @v2CliArgs --device "TMS320F280049C" --package "100PZ" --product "powerSUITE@3.00.00.00"
+ * @versions {"tool":"1.21.1+3771"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const TIDM_02002 = scripting.addModule("/devkits/TIDM_02002/TIDM_02002");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+// INCR_BUILD
+TIDM_02002.LAB_Index = 3;
+
+// Control Running On
+TIDM_02002.ControlISRCore = 1;
+
+// Tuning
+TIDM_02002.Tuning = 2;
+
+// Comp Number
+TIDM_02002.COMP_NUM = 1;
+
+// Comp Style
+TIDM_02002.Style = 12;
+
+// SFRA Type
+TIDM_02002.SFRA_Type = 0;
+
+// ISR2 Frequency
+TIDM_02002.ISR2_Freq = 100000;
+
+// ISR3 Frequency
+TIDM_02002.ISR3_Freq= 10000;
+
+// Switching Freq (Fsw in kHz)
+TIDM_02002.NOMINAL_PWM_SWITCHING_FREQUENCY_kHz = 500.8;
+
+// PWM Switching Frequency
+TIDM_02002.MAX_PWM_SWITCHING_FREQUENCY_kHz = 700;
+TIDM_02002.MIN_PWM_SWITCHING_FREQUENCY_kHz = 300;
+
+// PWM Deadband
+TIDM_02002.PRIM_PWM_DEADBAND_RED_NS = 102.3;
+TIDM_02002.PRIM_PWM_DEADBAND_FED_NS = 102.3;
+TIDM_02002.SEC_PWM_DEADBAND_RED_NS = 102;
+TIDM_02002.SEC_PWM_DEADBAND_FED_NS = 102;
+
+// Max Vbus (V)
+TIDM_02002.VPRIM_MAX_SENSE = 661.49;
+TIDM_02002.VSEC_MAX_SENSE = 480.0;
+TIDM_02002.VSEC_OPTIMAL_RANGE = 450.0;
+TIDM_02002.VSEC_NOMINAL = 300.0;
+TIDM_02002.VPRIM_NOMINAL = 400.0;
+
+// Max (+-Amp)
+TIDM_02002.IPRIM_MAX_SENSE = 34.375;
+TIDM_02002.ISEC_MAX_SENSE = 42.438;
+TIDM_02002.IPRIM_TANK_MAX_SENSE = 34.375;
+TIDM_02002.ISEC_TANK_MAX_SENSE = 42.375;
+
+// Trip Set (+-Amp)
+TIDM_02002.IPRIM_TRIP_LIMIT = 30.0;
+TIDM_02002.ISEC_TRIP_LIMIT = 40.0;
+TIDM_02002.IPRIM_TANK_TRIP_LIMIT = 30.0;
+TIDM_02002.ISEC_TANK_TRIP_LIMIT = 40.0;
+
